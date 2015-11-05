@@ -1,0 +1,26 @@
+{
+  "name": "node_dev",
+  "version": "1.0.0",
+  "description": "node 权威指南 学习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengjianjunstudy/node_dev.git"
+  },
+  "keywords": [
+    "node",
+    "权威指南"
+  ],
+  "author": "fjj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fengjianjunstudy/node_dev/issues"
+  },
+  "homepage": "https://github.com/fengjianjunstudy/node_dev#readme",
+  "dependencies": {
+    "supervisor": "^0.9.1"
+  }
+}
