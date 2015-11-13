@@ -2,38 +2,12 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel="stylesheet", href="/stylesheets/bootstrap.css")
-    link(rel="stylesheet", href="/stylesheets/bootstrap-responsive.css")
-  body
-    .navbar.navbar-fixed-top.navbar-inverse
-      .navbar-inner
-        .container
-          button(type="button",data-toggle="collapse",data-target=".nav-collapse").btn.btn-navbar
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a(href="/").brand
-            | Microblog
-          .nav-collapse.collapse
-            ul.nav
-              li.active
-                a(href="/") 首页
-              li
-                a(href="/login") 登入
-              li
-                a(href="/reg") 注册
-              li.dropdown
-                a(data-toggle="dropdown",href="#").dropdown-toggle
-                  | Dorpdown
-                  b.caret
-                ul.dropdown-menu
-                  li
-                    a(href="#") Action
-                  li
-                    a(href="#") Another action
-    .container
-      block content
-    script(src="/javascripts/bootstrap.js")
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel="stylesheet", href="/css/bootstrap.css")
+    link(rel="stylesheet", href="/css/bootstrap-responsive.css")
     script(src="/javascripts/jquery-1.11.3.js")
-    block js
+    script(src="/javascripts/bootstrap.js")
+  body
+    include module/header
+    block content
+    include module/footer

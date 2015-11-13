@@ -1,0 +1,12 @@
+.container
+	.header 通远汽贸
+		.navbar
+			.navbar-inner
+				a.brand(href="#") 通远汽贸
+				ul.nav
+					-var items=["首页","海马M8","海马M6","海马M3","海马S7","海马S5","福美来","普力马","丘比特","福仕达","其他"] 
+					-var cur=0
+					each item,n in items
+						-var flag=(cur===n)
+							li(class=flag?"active":"")
+								a(href="#") #{item}
