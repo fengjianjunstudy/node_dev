@@ -5,13 +5,17 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var poster=require("./routes/post");
 var reg=require("./routes/reg");
-
+var fs = require('fs');
+var accessLogfile = fs.createWriteStream('access.log', {flags: 'a'});
+var errorLogfile = fs.createWriteStream('error.log', {flags: 'a'});
 var app = express();
-
+//app.use(express.logger({stream: accessLogfile}));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
