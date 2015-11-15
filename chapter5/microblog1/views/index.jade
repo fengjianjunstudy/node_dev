@@ -1,7 +1,7 @@
 extends layout
 
 block content
-	.container
+	.container-fluid
 		#myCarousel.carousel.slide
 			ol.carousel-indicators
 				li.active(data-target="#myCarousel",data-slide-to="0")
@@ -10,22 +10,30 @@ block content
 					
 			.carousel-inner
 				.active.item
-					img(src="/images/1.jpg",width="1170")
+					img(src="/images/1.jpg")
 					.carousel-caption
 						h4 First Thumbnail label
 						p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 				.item
-					img(src="/images/2.jpg",width="1170")
+					img(src="/images/2.jpg")
 					.carousel-caption
 						h4 Second Thumbnail label
 						p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 				.item
-					img(src="/images/3.jpg",width="1170")
+					img(src="/images/3.jpg")
 					.carousel-caption
 						h4 Third Thumbnail label
 						p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-			a.carousel-control.left(href="#myCarousel",data-slide="prev") &lsaquo;
-			a.carousel-control.right(href="#myCarousel",data-slide="next") &rsaquo;
+	.container.xilieCon
+		ul.row.xilie
+			- for(var i=0;i<6;i++)
+				li.col-md-2
+					.li_div
+						a(href="/list/M8")
+							.xilie_name  M8系列
+							.zhe_layer
+							.zhe_con 
+								| 3月25日，海马汽车在国家跳水中心水立方召开新闻发布会，正式发布以“用户服务”为核心、以移动互联新生态构建为目标的moofun移动互联人车生态系统。海马汽车集团执行总裁孙忠春表示...
 	script.
 		$('.carousel').carousel()
 
