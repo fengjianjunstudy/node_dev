@@ -16,4 +16,4 @@ admin.get('/', function (req, res) {
 })*/
 
 app.use(['/adm*n', '/manager'], admin);
-app.listen(3001)
+app.listen(3000)
