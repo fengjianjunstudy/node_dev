@@ -9,8 +9,6 @@ block content
 				li(data-target="#myCarousel",data-slide-to="2")
 					
 			.carousel-inner
-				//- var slides=[{"imgUrl":"/images/1.jpg","href":"#1","title":"First Thumbnail label","dscrpt":"dscrpt1"},{"imgUrl":"/images/2.jpg","href":"#2","title":"Second Thumbnail label","dscrpt":"dscrpt2"},{"imgUrl":"/images/3.jpg","href":"#3","title":"Third Thumbnail label","dscrpt":"dscrpt3"}]
-		
 				- var defalut=0
 				- for(var i=0;i<slides.length;i++)
 					if defalut == i
@@ -26,31 +24,15 @@ block content
 								.carousel-caption
 									h4 #{slides[i].title}
 									p #{slides[i].dscrpt}
-				//- a.active.item(href="#")
-				//- 	img(src="/images/1.jpg")
-				//- 	.carousel-caption
-				//- 		h4 First Thumbnail label
-				//- 		p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-				//- a.item(href="#")
-				//- 	img(src="/images/2.jpg")
-				//- 	.carousel-caption
-				//- 		h4 Second Thumbnail label
-				//- 		p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-				//- a.item(href="#")
-				//- 	img(src="/images/3.jpg")
-				//- 	.carousel-caption
-				//- 		h4 Third Thumbnail label
-				//- 		p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 	.container.xilieCon
 		ul.row.xilie
-			- for(var i=0;i<6;i++)
+			- for(var i=0;i<xilies.length;i++)
 				li.col-md-2
 					.li_div
 						a(href="/list/M8")
-							.xilie_name  M8系列
+							.xilie_name  #{xilies[i].title}
 							.zhe_layer
-							.zhe_con 
-								| 3月25日，海马汽车在国家跳水中心水立方召开新闻发布会，正式发布以“用户服务”为核心、以移动互联新生态构建为目标的moofun移动互联人车生态系统。海马汽车集团执行总裁孙忠春表示...
+							.zhe_con #{xilies[i].desc}
 	script.
 		$('.carousel').carousel()
 

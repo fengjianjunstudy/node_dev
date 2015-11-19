@@ -1,0 +1,45 @@
+extends layout
+
+block content
+	.container
+		ul.xielie_ul
+			- for(var i=0;i<6;i++)
+				li.row
+					.col-md-3
+						a(href="#")
+							img(src="../images/4.jpg")
+					.col-md-6
+						h3 
+							a(href="#") 2015款 1.6L 手动智尚型
+						dl.car_dl
+							dd 
+								label 车身尺寸：
+								span 4358*1823*1630
+							dd 
+								label 车主油耗:
+								span 8.7L/100km(4人均值)
+							dd 
+								label 车身结构:
+								span SUV
+							dd 
+								label 发 动 机:
+								span 1.6L 122马力 L4
+							dd 
+								label 变 速 箱:
+								span SUV
+							dd 
+								label 综合油耗：
+								span 5挡手动
+					.col-md-3
+						.lower_price 
+							label 参考底价：
+							span 7.98 万元
+						.other_price
+							label 厂商指导价:
+							span 首付2.39万元（24期）
+						.other_price
+							label 贷款购车：
+							span 首付2.39万元（24期）
+						.other_price
+							label 全款购车：
+							span 9.24万元

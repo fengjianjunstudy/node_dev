@@ -4,6 +4,7 @@ var path=require("path");
 var app=express();
 app.use(express.static(path.join(__dirname,"public")));
 app.set("views",path.join(__dirname,"views"));
+console.log(__dirname)
 app.set("view engine","jade")
 var index=require("./routes/index")
 var list=require("./routes/list")
