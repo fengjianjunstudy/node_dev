@@ -3,43 +3,44 @@ extends layout
 block content
 	.container
 		ul.xielie_ul
-			- for(var i=0;i<6;i++)
+			//- var lists=[{id:"123",name:"2015款 1.6L 手动智尚型",carImg:"../images/4.jpg",size:"4358*1823*1630",mainOil:"8.7L/100km(4人均值)",construction:"SUV",engine:"1.6L 122马力 L4",Transmission:"6挡手自一体",composite:"8L/100km(4人均值)",lowerPrice:"7.98 万元",factoryPrice:"首付2.39万元（24期）",loanPrice:"首付2.39万元（24期）",allPrice:"9.24万元"},{id:"321",name:"2015款 1.6L 手动智尚型",size:"4358*1823*1630",carImg:"../images/4.jpg",mainOil:"8.7L/100km(4人均值)",construction:"SUV",engine:"1.6L 122马力 L4",Transmission:"6挡手自一体",composite:"8L/100km(4人均值)",lowerPrice:"7.98 万元",factoryPrice:"首付2.39万元（24期）",loanPrice:"首付2.39万元（24期）",allPrice:"9.24万元"}]
+			- for(var i=0;i<lists.length;i++)
 				li.row
 					.col-md-3
-						a(href="#")
-							img(src="../images/4.jpg")
+						a(href="../detail/#{carType}/#{lists[i].id}")
+							img(src="#{lists[i].carImg}")
 					.col-md-6
 						h3 
-							a(href="#") 2015款 1.6L 手动智尚型
+							a(href="../detail/#{carType}/#{lists[i].id}") 2015款 1.6L 手动智尚型
 						dl.car_dl
 							dd 
 								label 车身尺寸：
-								span 4358*1823*1630
+								span #{lists[i].size}
 							dd 
 								label 车主油耗:
-								span 8.7L/100km(4人均值)
+								span #{lists[i].mainOil}
 							dd 
 								label 车身结构:
-								span SUV
+								span #{lists[i].construction}
 							dd 
 								label 发 动 机:
-								span 1.6L 122马力 L4
+								span #{lists[i].engine}
 							dd 
 								label 变 速 箱:
-								span SUV
+								span #{lists[i].Transmission}
 							dd 
 								label 综合油耗：
-								span 5挡手动
+								span #{lists[i].composite}
 					.col-md-3
 						.lower_price 
 							label 参考底价：
-							span 7.98 万元
+							span #{lists[i].lowerPrice}
 						.other_price
 							label 厂商指导价:
-							span 首付2.39万元（24期）
+							span #{lists[i].factoryPrice}
 						.other_price
 							label 贷款购车：
-							span 首付2.39万元（24期）
+							span #{lists[i].loanPrice}
 						.other_price
 							label 全款购车：
-							span 9.24万元
+							span #{lists[i].allPrice}

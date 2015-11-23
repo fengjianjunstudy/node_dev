@@ -1,4 +1,7 @@
 extends layout
 
 block content
-  .detail 哈佛
+	.detail
+		h3.d_title #{carDetail.detailTitle}
+		p.time #{carDetail.creatTime}
+		.d_con #{carDetail.conHtml}

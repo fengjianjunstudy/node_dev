@@ -22,6 +22,6 @@ admin.get('/', function (req, res) {
 })*/
 app.use("/",index);
 app.use("/list",list)
-app.use("/detail/:id",detail)
+app.use("/detail",detail)
 app.use(['/adm*n', '/manager'], admin);
 app.listen(3000)
